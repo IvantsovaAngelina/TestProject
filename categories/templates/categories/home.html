@@ -1,6 +1,21 @@
 {% extends 'categories/base.html' %}
 
 {% block content %}
-    <h1>Hello world</h1>
+{% for categories in categories %}
+    <div class="card">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="{{categories.image.url}}" alt="" class="image">
+                    <h3>{{categories.title}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="card">
+        <h1>Hello</h1>
+
+    </div>
+{% endfor %}
 {% endblock %}

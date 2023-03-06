@@ -1,4 +1,10 @@
-.header
+.user-icon{
+    width:10%;
+}
+
+.user-logo{
+    width:10%;
+}
 
 h1 {
     color: red;

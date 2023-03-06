@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Categories
 
 def home(request):
-    return render(request, "categories/home.html")
+    categories = Categories.objects.all()
+    return render(request, "categories/home.html", {'categories': categories})
