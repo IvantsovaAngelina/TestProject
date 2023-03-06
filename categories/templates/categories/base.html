@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link href="{% static 'portfolio/style.css' %}" rel="stylesheet" />
+    <link  rel="stylesheet" href="{% static 'categories/style.css' %}" />
     <title>Hello, world!</title>
   </head>
   <body>
@@ -16,23 +16,40 @@
       <div class="container">
         <div class="row">
           <div class ="col-md-2">
-
+            <img class="logo" src="{% static 'categories/logo.svg' %}">
           </div>
           <div class ="col-md-2">
-
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Категории
+            </button>
           </div>
           <div class ="col-md-6">
-
+            <form class="d-flex">
+              <input class="form-control mr-2" type="search" placeholder="Поиск категорий и товаров" aria-label="Search">
+              <button class="btn btn-primary" type="submit">Поиск</button>
+            </form>
           </div>
           <div class ="col-md-2">
-
+            <img class="user-icon" src="{% static 'categories/user.png' %}" alt="user">
+            <img class="user-logo" src="{% static 'categories/like.png' %}" alt="user">
           </div>
         </div>
       </div>
     </div>
 
-    {% block content %} {% endblock %}
+    <!-- Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h1>KEK</h1>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    {% block content %} {% endblock %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
